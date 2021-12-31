@@ -16,17 +16,8 @@ Scrape the [Massachusetts Water Resources Authority (MWRA) wastewater COVID-19 d
 
 ![A map of the boston metro area, divided into two regions. A green northern region and a orange southern region. In the west is the boston harbor and there's a black dot there, on a peninsula in Winthrop. That's the wastewater treatment plant. The northern region has the comprises the following towns: Bedford, Wilmington, Burlington, Lexington, Waltham, Reading, Woburn, Winchester, Wakefield, Stoneham, Melrose, Medford, Arlington, Belmont, Malden, Watertown, Somerville, Everett, Revere, Chelsea, Cambridge, Winthrop, Boston, and the northern parts of Newton, Brookline, and Boston. The southern region comprises the following towns: Ashland, Walpole, Stoughton, Holbrook, Weymouth, Hingham, Framingham, Natick, Wellesley, Needham, Dedham, Westwood, Canton, Randolph, Braintree, Quincy, Milton, and the southern parts of Newton, Brookline, and Boston.](map.jpg "The northern and southern MWRA wastewater regions")
 
-# Install
+# Install and run
 
 - Install [`poetry`](https://python-poetry.org)
-- Install python dependencies
-
-```
-poetry install
-```
-
-# Run
-
-```
-jupyter notebook plot-covid-wastewater.ipynb
-```
+- Install python dependencies via `poetry install`
+- Run `jupyter notebook plot-covid-wastewater.ipynb`
