@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "dropna",
-        "iloc"
+        "iloc",
+        "isin"
     ]
 }
