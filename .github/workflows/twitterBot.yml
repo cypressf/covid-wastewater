@@ -7,16 +7,14 @@ on:
     - cron: "0 16 * * *"
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 jobs:
-  build:
+  tweet:
     runs-on: ubuntu-latest
     steps:
-      - name: TweetToTwitter
-        uses: InfraWay/tweet-action@v1.0.1
+      - uses: ethomson/send-tweet-action@v1
         with:
-          status: Test Tweet
-          api_key: ${{ secrets.TWITTER_API_KEY }}
-          api_key_secret: ${{ secrets.TWITTER_API_KEY_SECRET }}
-          access_token: ${{ secrets.TWITTER_BEARER_TOKEN }}
-          access_token_secret: ${{ secrets.TWITTER_BEARER_TOKEN }}
+          status: "Hi, this is a test!"
+          consumer-key: ${{ secrets.TWITTER_API_KEY }}
+          consumer-secret: ${{ secrets.TWITTER_API_KEY_SECRET }}
+          access-token: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          access-token-secret: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
