@@ -5,11 +5,59 @@
     <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <title>Cambridge & Somerville Covid counts</title>
+    <style>
+        body {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
 </head>
 
 <body>
+    <header>
+        <h1>Cambridge & Somerville Covid counts</h1>
+        <a href="https://github.com/cypressf/covid-wastewater"><img src="GitHub-Mark-64px.png" alt="GitHub logo"></a>
+    </header>
 
-    <div id="vis"></div>
+    <p>I scraped the <a href="https://www.mwra.com/biobot/biobotdata.htm">Massachusetts Water Resources Authority (MWRA)
+            wastewater COVID-19 data</a> from a PDF, saved it as a csv file, and plotted it vs the <a
+            href="https://github.com/nytimes/covid-19-data">New York Times reported covid case numbers</a>.</p>
+
+    <h2>The Data</h2>
+
+    <p><a href="covid-19-wastewater.csv">Download the data as a csv</a></p>
+
+    <h2>Measured COVID-19 in Wastewater vs Reported Cases in Middlesex County, Massachusetts</h2>
+
+    <div id="vis"
+        alt="A line graph, showing covid prevalence for the northern region in RNA copies/mL 7 day average over time. The most recent month, Dec 2021, has a spike 10x higher than any previous record. There are smaller peaks in April 2020 and December 2020 to February 2021 but they are dwarfed by the recent spike. It also shows the reported cases, which follow the trend of the wastewater measurements, except the most recent spike is about 1/5 the height">
+    </div>
+
+    <p>The wastewater measurements are higher than the reported cases in the most recent month. I made this chart to
+        highlight this, and inspire people to ask why. Some possibilities:</p>
+
+    <ul>
+        <li>There aren't enough tests to keep up with case numbers</li>
+        <li>More people are testing at home and not reporting positives</li>
+        <li>People are asymptomatic, so they're not testing</li>
+        <li>Testing lags behind the wastewater data, and the recent increase was so steep that the difference is most
+            noticeable in the last month</li>
+        <li>Viral load expelled in wastewater is higher with different new variants</li>
+        <li>New variants infect animals, which contribute to viral load in the water</li>
+        <li>The measured areas overlap, but are different: Middlesex County for positive tests, and the northern MWRA
+            region
+            for wastewater measurements. Perhaps the Northern MWRA region has a higher rate of cases than Middlesex
+            County.</li>
+    </ul>
+
+    <p>If anyone is researching this, has expert knowledge, or knows of journal articles on it, let me know.</p>
 
     <script type="text/javascript">
         var spec = "covid-19-wastewater.json";
