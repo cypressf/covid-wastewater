@@ -10,6 +10,7 @@ Scrape the [Massachusetts Water Resources Authority (MWRA) wastewater COVID-19 d
 
 The wastewater measurements are higher than the reported cases in the most recent month. I made this chart to highlight this, and inspire people to ask why. Some possibilities:
 
+- The confidence interval of wastewater measurements is larger the higher the valeus are. It could be that the values aren't as high as reported, if they fall in the lower half of the confidence interval.
 - There aren't enough tests to keep up with case numbers
 - More people are testing at home and not reporting positives
 - People are asymptomatic, so they're not testing
